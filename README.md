@@ -9,7 +9,7 @@
 <img src='screens/settings.png'>
 
 1. File Scanner
-   - Yara rules match if offline
+   - Yara engine is used offline
    - VirusTotal scanner (API key has to be provided)
    
 2. System Scanner
@@ -30,17 +30,17 @@
    - Auto check for updates (from github)
    - Submit samples to VirusTotal (only applies to File Scanner tab)
    
-### Some of the upcoming updates are listed here
+### Some of the planned features are listed here
 - [ ] Auto updater for the AV
 - [ ] Logging or an API
 - [ ] Linux version
-- [ ] AI powered no distributional scanner
-<b>(Please take these as long term goals that might have lower priority than the new projects)<b>
+- [ ] AI powered no distributional scanner<br>
+<b>(Please take these as long term goals that might have lower priority than the new projects)</b><br>
 
-<u>Credits</u>
-<a href='https://github.com/orgs/DivineSoftware/people/CroatianApoxyomenos'>GUI Author</a>
-<a href='https://github.com/TomSchimansky/CustomTkinter'>CustomTkinter</a>
-<a href='https://github.com/Neo23x0/Loki'>Loki</a>
-<a href='https://github.com/hasherezade/hollows_hunter'>Hollows Hunter</a>
+<u>Credits</u><br>
+<a href='https://github.com/orgs/DivineSoftware/people/CroatianApoxyomenos'>GUI Author</a><br>
+<a href='https://github.com/TomSchimansky/CustomTkinter'>CustomTkinter</a><br>
+<a href='https://github.com/Neo23x0/Loki'>Loki</a><br>
+<a href='https://github.com/hasherezade/hollows_hunter'>Hollows Hunter</a><br>
 
-Follow our GitHub account to receive latest updates on our open source software releases and check out our <a href='https://thedivine.one/products/cybarrier/index.html'>0-Day scanner and Realtime Antivirus</a>
+Follow our GitHub account to receive latest updates on our open source software releases and check out our <a href='https://thedivine.one/products/cybarrier/index.html'>0-Day protection</a>
