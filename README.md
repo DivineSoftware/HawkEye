@@ -43,7 +43,7 @@ The idea behind this project is to provide an easy to use front end for the open
 This project is currently in BETA, if you find any bugs, feel free to report them in the <a href='https://github.com/DivineSoftware/HawkEye/issues'>Issues</a> tab
 <br><br>
 <u>Credits</u><br>
-<a href='https://github.com/orgs/DivineSoftware/people/CroatianApoxyomenos'>GUI Author</a><br>
+<a href='https://github.com/CroatianApoxyomenos'>GUI Author</a><br>
 <a href='https://github.com/TomSchimansky/CustomTkinter'>CustomTkinter</a><br>
 <a href='https://github.com/Neo23x0/Loki'>Loki</a><br>
 <a href='https://github.com/hasherezade/hollows_hunter'>Hollows Hunter</a><br>
