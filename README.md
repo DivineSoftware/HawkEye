@@ -2,7 +2,7 @@
 
 ### Antivirus program made using Python to provide open source security to wide public<br>
 
-The idea behind this project is to provide an easy to use front end for the open source command line security tools that provide great security when used on daily basis.
+The idea behind this project is to provide an easy to use front end for the open source command line security tools that offer great security when used on daily basis.
 <br>
 1. File Scanner
    - Yara engine is used offline
