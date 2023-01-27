@@ -2,7 +2,7 @@
 
 ### Antivirus program made using Python to provide open source security to wide public<br>
 
-The idea behind this project is to provide an easy to use front end for the open source command line security tools that provide great security when used on daily basis.
+The idea behind this project is to provide an easy to use front end for the open source command line security tools that provide great protection when used on daily basis.
 <br>
 1. File Scanner
    - Yara engine is used offline
@@ -42,7 +42,7 @@ The idea behind this project is to provide an easy to use front end for the open
 <br>
 This project is currently in BETA, if you find any bugs, feel free to report them in the <a href='https://github.com/DivineSoftware/HawkEye/issues'>Issues</a> tab
 <br><br>
-<u>Credits</u><br>
+<u><b>Credits</b></u><br>
 <a href='https://github.com/CroatianApoxyomenos'>GUI Author</a><br>
 <a href='https://github.com/TomSchimansky/CustomTkinter'>CustomTkinter</a><br>
 <a href='https://github.com/Neo23x0/Loki'>Loki</a><br>
