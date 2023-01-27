@@ -31,6 +31,9 @@ The idea behind this project is to provide an easy to use front end for the open
    - Submit samples to VirusTotal (only applies to File Scanner tab)
 <img src='screens/settings.png' />
 
+### Download
+Get the latest version from <a href='https://github.com/DivineSoftware/HawkEye/releases'>releases</a>.
+
 ### Some of the planned features are listed here
 - [ ] Auto updater for the AV
 - [ ] Automatic scanner/scheduled scans
