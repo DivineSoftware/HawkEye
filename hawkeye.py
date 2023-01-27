@@ -5,7 +5,6 @@ import customtkinter
 from tkinter import ttk
 from PIL import Image, ImageTk
 import os, subprocess, sys, psutil
-from pyperclip import copy
 import threading, time
 import platform, winreg
 import requests, json, zipfile
@@ -13,7 +12,12 @@ import vt, yara, hashlib
 
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
-PATH = os.path.dirname(os.path.realpath(__file__))
+if getattr(sys, 'frozen', False):
+    PATH = os.path.dirname(sys.executable)
+else:
+    PATH = os.path.dirname(os.path.abspath(__file__))
+
+os.chdir(PATH)
 
 class App(customtkinter.CTk):
     #HELPER FUNCTIONS CODE
