@@ -52,3 +52,4 @@ This project is currently in BETA, if you find any bugs, feel free to report the
 <a href='https://github.com/hasherezade/hollows_hunter'>Hollows Hunter</a><br>
 
 Follow our <a href='https://github.com/DivineSoftware'>GitHub</a> account to receive latest updates on our open source software releases and be sure to check out our <a href='https://thedivine.one/products/cybarrier/index.html'>0-Day protection</a>.
+
