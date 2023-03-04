@@ -9,6 +9,7 @@ import threading, time
 import platform, winreg
 import requests, json, zipfile
 import vt, yara, hashlib
+import webbrowser
 
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
@@ -95,7 +96,7 @@ class App(customtkinter.CTk):
             self.result_label.configure(text="Detected\nRule: "+matches[0].rule)
             self.result_label.configure(fg="red")
         except Exception as e: print(e)
-      if self.result_label.text == "":
+      if self.result_label.text == "Scanning...":
           self.result_label.configure(fg="green")
           self.result_label.configure(text="Clean")
    
@@ -155,12 +156,15 @@ class App(customtkinter.CTk):
           if not line: p.kill(); break
           if not var: p.kill(); break
           if line.startswith("FILE: "):
+              if not self.drive_scan: p.kill();break
               elem.insert("", 0, values=(line.split("TYPE: ")[1].split(" ")[0], line.split("FILE: ")[1].split(" ")[0], line.split("SCORE: ")[1].split(" ")[0]))
               self.add_quarantine(line.split("TYPE: ")[1].split(" ")[0], line.split("FILE: ")[1].split(" ")[0], "System Scanner")
           elif line.startswith(">> Scanning PID: "):
+            if not self.proc_scan: p.kill();break
             if line.split(" ")[3] != "":
                elem.insert("", 0, values=(line.split(" ")[3], line.split(" ")[5], "Clean"))
           elif line.startswith(">> Detected: "):
+               if not self.proc_scan: p.kill();break
                for each in self.tab3_treeview.get_children():
                    if self.tab3_treeview.item(each)['values'][0] == line.split(" ")[2]:
                        self.tab3_treeview.item(each, values=(self.tab3_treeview.item(each)['values'][0], self.tab3_treeview.item(each)['values'][1], "Detected"))
@@ -246,8 +250,20 @@ class App(customtkinter.CTk):
         winreg.CloseKey(registry_key)
 
     def update(self):
-        pass
-    
+        #ToDo: autoupdate like the engines
+        try:
+          version = requests.get("https://raw.githubusercontent.com/DivineSoftware/HawkEye/main/version").text
+          if float(version)>float(self.VERSION):
+            if tkinter.messagebox.askquestion("Update available", "Update HawkEye to the latest version?") == "yes":
+                webbrowser.open("https://github.com/DivineSoftware/HawkEye/tags")
+          else:
+            if not self.settings['autoupdate']:
+                tkinter.messagebox.showinfo("Latest version", "HawkEye antivirus is up to date")
+        except Exception as e:
+              print(e)
+              if not self.settings['autoupdate']:
+                tkinter.messagebox.showinfo("Failed to check for updates", "Please check your internet connection")
+
     '''
     def tab_changed(self, event):
         selection = event.widget.select()
